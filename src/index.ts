@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use('/files', express.static(path.join(__dirname, '/../', 'files')))
 
 app.get('/', async (req, res) => {
-  res.send('Hello World!')
+  return res.redirect('/api/files')
 })
 
 app.get('/api/*', async (req, res) => {
